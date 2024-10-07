@@ -45,4 +45,5 @@ jobs:
       - name: var in R
         run: |
           #Rscript -e "cat(paste('The website core is:', Sys.getenv('ghpagesite')))"
-          Rscript -e "cat(Sys.getenv('ghpagesite'))"
+          #Rscript -e "cat(Sys.getenv('ghpagesite'))"
+          Rscript -e 'cat(Sys.getenv("ghpagesite"))'
