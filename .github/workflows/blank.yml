@@ -42,4 +42,4 @@ jobs:
 
       - name: gsub site
         run: |
-          Rscript -e '${{ github.repository }} |> gsub(pattern = "/", replacement = ".github.io/", x = _) |> paste0("https:://", ... = _, "/")'
+          Rscript -e '"${{ github.repository }}" |> gsub(pattern = "/", replacement = ".github.io/", x = _) |> paste0("https:://", ... = _, "/")'
