@@ -42,4 +42,5 @@ jobs:
 
       - name: gsub site
         run: |
-          Rscript -e '"${{ github.repository }}" |> gsub(pattern = "/", replacement = ".github.io/", x = _) |> paste0("https:://", ... = _, "/")'
+          Rscript -e 'gh-page-site <- "${{ github.repository }}" |> gsub(pattern = "/", replacement = ".github.io/", x = _) |> paste0("https:://", ... = _, "/")'
+          Rscript -e 'cat(gh-page-site)
