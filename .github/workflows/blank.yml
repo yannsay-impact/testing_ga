@@ -39,7 +39,7 @@ jobs:
           echo "ghpagesite=$ghpagesite" >> $GITHUB_ENV
 
       - name: Test var
-          echo ${{ghpagesite}}
+        run: echo ${{ghpagesite}}
 
       # Call the var in R
       - name: var in R
