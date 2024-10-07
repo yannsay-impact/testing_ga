@@ -43,6 +43,7 @@ jobs:
         with:
           r-version: '4.4.0'
 
-      - name: gsub site
+      - name: var in R
         run: |
-          Rscript -e "cat(paste('The website core is:', '$ghpagesite'))"
+          Rscript -e "cat(paste('The website core is:', "${{ ghpagesite }}" ))"
+           
