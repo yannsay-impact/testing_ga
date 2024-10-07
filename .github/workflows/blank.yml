@@ -45,4 +45,4 @@ jobs:
 
       - name: gsub site
         run: |
-          Rscript -e "cat(paste('The website core is:', '$webistecore'))"
+          Rscript -e "cat(paste('The website core is:', '$ghpagesite'))"
