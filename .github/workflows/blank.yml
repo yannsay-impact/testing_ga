@@ -48,4 +48,4 @@ jobs:
 
       - name: var in R
         run: |
-          Rscript -e "cat(paste('The website core is:', ${{ env.ghpagesite }} ))"
+          Rscript -e "cat(paste('The website core is:', "${{ env.ghpagesite }}" ))"
