@@ -37,6 +37,9 @@ jobs:
           repo=$(echo ${{ github.repository }} | cut -d'/' -f2)
           ghpagesite="https://$owner.github.io/$repo/"
           echo $ghpagesite
+
+          echo "ghpagesite=$ghpagesite" >> $GITHUB_ENV
+          echo "${{ env.ghpagesite }}"
   
       - name: Install R
         uses: r-lib/actions/setup-r@v2
@@ -45,4 +48,4 @@ jobs:
 
       - name: var in R
         run: |
-          Rscript -e "cat(paste('The website core is:', "${ ghpagesite }" ))"
+          Rscript -e "cat(paste('The website core is:', ${{ env.ghpagesite }} ))"
