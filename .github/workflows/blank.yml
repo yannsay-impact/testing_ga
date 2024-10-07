@@ -33,7 +33,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo ${{ github.repository }}
-          githubrepo=${ {{ github.repository }} /\//.github.io\/}
           owner=$(echo $githubrepo | cut -d'/' -f1)
           repo=$(echo $githubrepo | cut -d'/' -f2)
           ghpagesite="https://$owner.github.io/$repo/"
